@@ -310,17 +310,7 @@ frameborder="0"></iframe>
 </footer>
 <script>
 function updateUTC() {
-    function pulseStatus() {
-  const el = document.getElementById("sys-status");
-
-  if (el.textContent === "SYS: ONLINE") {
-    el.textContent = "SYS: ACTIVE";
-  } else {
-    el.textContent = "SYS: ONLINE";
-  }
-}
-
-setInterval(pulseStatus, 1500);
+    
   const now = new Date();
 
   document.getElementById("utc-clock").textContent =
