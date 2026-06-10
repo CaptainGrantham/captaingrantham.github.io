@@ -261,6 +261,10 @@ z-index:1000;
         <div id="sys-status" style="background:#0b1a2b; border:1px solid #223247; padding:12px 18px; border-radius:6px; font-size:12px;">
   SYS: ONLINE
 </div>
+        <div id="zulu-date" style="background:#0b1a2b; border:1px solid #223247; padding:12px 18px; border-radius:6px; font-size:12px;">
+  DATE: ----
+</div>
+        
         
         
 </div>
@@ -327,7 +331,17 @@ setInterval(pulseStatus, 1500);
     now.getUTCHours().toString().padStart(2, "0") + ":" +
     now.getUTCMinutes().toString().padStart(2, "0") + ":" +
     now.getUTCSeconds().toString().padStart(2, "0");
+}function updateZuluDate() {
+  const now = new Date();
+
+  document.getElementById("zulu-date").textContent =
+    "DATE: " +
+    now.getUTCDate().toString().padStart(2, "0") + "/" +
+    (now.getUTCMonth() + 1).toString().padStart(2, "0") + "/" +
+    now.getUTCFullYear();
 }
+
+updateZuluDate();
 
 updateUTC();
 setInterval(updateUTC, 1000);
