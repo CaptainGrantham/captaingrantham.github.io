@@ -118,12 +118,48 @@ h2{
 
 <body>
 
-<header>
-<div>CAPTAIN GRANTHAM</div>
-<div>
-<a href="#latest">Latest</a>
-<a href="#uploads">Uploads</a>
-</div>
+<header style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:linear-gradient(180deg, #0b1a2b, #08111d);
+border-bottom:1px solid #223247;
+position:sticky;
+top:0;
+z-index:1000;
+">
+
+  <div style="display:flex; flex-direction:column; line-height:1.1;">
+    <span style="color:#d4af37; font-weight:700; letter-spacing:3px;">
+      CAPTAIN GRANTHAM
+    </span>
+    <span style="font-size:10px; color:#7f8ea3; letter-spacing:2px;">
+      SIMULATION • SURVIVAL • EXPLORATION
+    </span>
+  </div>
+
+  <div style="
+    color:#7f8ea3;
+    font-size:12px;
+    letter-spacing:2px;
+    border:1px solid #223247;
+    padding:6px 12px;
+    border-radius:4px;
+    background:rgba(255,255,255,0.02);
+  ">
+    FLIGHT STATUS: ONLINE
+  </div>
+
+  <div style="display:flex; gap:18px;">
+    <a href="#latest" style="color:#e6edf3; text-decoration:none; font-size:13px; letter-spacing:1px;">
+      LATEST
+    </a>
+    <a href="#uploads" style="color:#e6edf3; text-decoration:none; font-size:13px; letter-spacing:1px;">
+      UPLOADS
+    </a>
+  </div>
+
 </header>
 
 <section class="hero">
