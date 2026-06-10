@@ -310,7 +310,6 @@ frameborder="0"></iframe>
 </footer>
 <script>
 function updateUTC() {
-    
   const now = new Date();
 
   document.getElementById("utc-clock").textContent =
@@ -318,7 +317,9 @@ function updateUTC() {
     now.getUTCHours().toString().padStart(2, "0") + ":" +
     now.getUTCMinutes().toString().padStart(2, "0") + ":" +
     now.getUTCSeconds().toString().padStart(2, "0");
-}function updateZuluDate() {
+}
+
+function updateZuluDate() {
   const now = new Date();
 
   document.getElementById("zulu-date").textContent =
@@ -327,11 +328,10 @@ function updateUTC() {
     (now.getMonth() + 1).toString().padStart(2, "0") + "/" +
     now.getFullYear();
 }
-}
 
 updateZuluDate();
-
 updateUTC();
+
 setInterval(updateUTC, 1000);
 </script>
 </body>
