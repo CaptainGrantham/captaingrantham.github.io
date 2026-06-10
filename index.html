@@ -125,6 +125,26 @@ h2{
 }@keyframes scanline {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+}@keyframes scanline {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,0.18),
+        transparent
+    );
+    animation: scanline 6s linear infinite;
+    pointer-events: none;
 }
 </style>
 </head>
@@ -133,6 +153,7 @@ h2{
 
 <header style="
 display:flex;
+    position:relative;
 justify-content:space-between;
 align-items:center;
 padding:18px 40px;
