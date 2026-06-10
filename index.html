@@ -1,0 +1,162 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captain Grantham</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#08111d;
+    color:#e6edf3;
+    line-height:1.6;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    background:
+    linear-gradient(rgba(8,17,29,.75),rgba(8,17,29,.9)),
+    url('hero.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    max-width:900px;
+}
+
+h1{
+    font-size:4rem;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.slogan{
+    color:#d4af37;
+    font-size:1.2rem;
+    letter-spacing:4px;
+    margin-bottom:30px;
+}
+
+.intro{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:0 auto 40px;
+}
+
+.button{
+    display:inline-block;
+    background:#d4af37;
+    color:#08111d;
+    padding:14px 30px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.button:hover{
+    opacity:0.9;
+}
+
+.sections{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#101c2d;
+    padding:30px;
+    border-radius:8px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#d4af37;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#8b949e;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container">
+
+<h1>Captain Grantham</h1>
+
+<p class="slogan">
+SIMULATION • SURVIVAL • EXPLORATION
+</p>
+
+<p class="intro">
+Exploring virtual skies, challenging environments,
+and immersive worlds through flight simulation,
+survival gameplay, and open-world adventures.
+</p>
+
+<a class="button"
+href="https://youtube.com/@YOURCHANNEL">
+Visit YouTube Channel
+</a>
+
+</div>
+</section>
+
+<section class="sections">
+
+<div class="card">
+<h2>Flight Simulation</h2>
+<p>
+Commercial aviation, general aviation,
+navigation, procedures, aircraft systems,
+and realistic flying experiences.
+</p>
+</div>
+
+<div class="card">
+<h2>Survival</h2>
+<p>
+Resource management, strategy,
+and overcoming demanding environments.
+</p>
+</div>
+
+<div class="card">
+<h2>Exploration</h2>
+<p>
+Open worlds, hidden discoveries,
+and journeys into the unknown.
+</p>
+</div>
+
+</section>
+
+<footer>
+© Captain Grantham
+</footer>
+
+</body>
+</html>
+```
