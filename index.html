@@ -301,6 +301,19 @@ frameborder="0"></iframe>
 <footer style="text-align:center; padding:40px; color:#8b949e; border-top:1px solid #223247;">
 © Captain Grantham
 </footer>
+<script>
+function updateUTC() {
+  const now = new Date();
 
+  document.getElementById("utc-clock").textContent =
+    "UTC: " +
+    now.getUTCHours().toString().padStart(2, "0") + ":" +
+    now.getUTCMinutes().toString().padStart(2, "0") + ":" +
+    now.getUTCSeconds().toString().padStart(2, "0");
+}
+
+updateUTC();
+setInterval(updateUTC, 1000);
+</script>
 </body>
 </html>
