@@ -35,6 +35,8 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000;
+     position: relative;
+overflow: hidden;
 }
 }
 }
@@ -122,6 +124,9 @@ h2{
     border-radius:8px;
 }html {
     scroll-behavior: smooth;
+}@keyframes scanline {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 </style>
 </head>
@@ -170,8 +175,17 @@ z-index:1000;
     </a>
   </div>
 
-</header>
-
+<header style="position:relative; overflow:hidden;">
+<div style="
+position:absolute;
+top:0;
+left:0;
+width:40%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(212,175,55,0.15), transparent);
+animation: scanline 6s linear infinite;
+pointer-events:none;
+"></div>
 <section class="hero">
 <div class="container">
 
