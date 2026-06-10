@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +19,38 @@ body{
     line-height:1.6;
 }
 
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#08111d;
+    border-bottom:1px solid #1f2a3a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header div:first-child{
+    font-weight:bold;
+    color:#d4af37;
+    letter-spacing:2px;
+}
+
+header a{
+    color:#e6edf3;
+    text-decoration:none;
+    margin-left:20px;
+}
+
 .hero{
     min-height:100vh;
-    <header style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#08111d; border-bottom:1px solid #1f2a3a; position:sticky; top:0; z-index:1000;">
+    display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:40px;
-    background:
-    linear-gradient(rgba(8,17,29,.75),rgba(8,17,29,.9)),
-    url('hero.jpg');
-    background-size:cover;
-    background-position:center;
+    background:#0b1726;
 }
 
 .container{
@@ -72,62 +90,48 @@ h1{
     opacity:0.9;
 }
 
-.sections{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-<h2 style="text-align:center; margin-top:40px;">Latest Video</h2>
-.card{<
-    
-  </iframe>
-</div>
-</iframe>
-    background:#101c2d;
-    padding:30px;
-    border-radius:8px;
-}
-
-.card h2{
-    margin-bottom:15px;
-    color:#d4af37;
-}
-
-footer{
+section{
+    padding:60px 20px;
     text-align:center;
-    padding:40px;
-    color:#8b949e;
-}iframe {
-    display: block;
-    margin: 40px auto;
+}
+
+h2{
+    color:#d4af37;
+    letter-spacing:2px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:#101c2d;
+    padding:20px;
+    width:250px;
+    border-radius:8px;
 }
 </style>
 </head>
 
 <body>
- <header> style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#08111d; border-bottom:1px solid #1f2a3a; position:sticky; top:0;">
-  
-  <div style="font-weight:bold; color:#d4af37; letter-spacing:2px;">
-    CAPTAIN GRANTHAM
-  </div>
 
-  <div style="display:flex; gap:20px;">
-    <a href="#latest" style="color:#e6edf3; text-decoration:none;">Latest</a>
-    <a href="#uploads" style="color:#e6edf3; text-decoration:none;">Uploads</a>
-  </div>
-
+<header>
+<div>CAPTAIN GRANTHAM</div>
+<div>
+<a href="#latest">Latest</a>
+<a href="#uploads">Uploads</a>
+</div>
 </header>
+
 <section class="hero">
 <div class="container">
 
 <h1>Captain Grantham</h1>
 
-<p class="slogan">
-SIMULATION • SURVIVAL • EXPLORATION
-</p>
+<p class="slogan">SIMULATION • SURVIVAL • EXPLORATION</p>
 
 <p class="intro">
 Exploring virtual skies, challenging environments,
@@ -135,77 +139,51 @@ and immersive worlds through flight simulation,
 survival gameplay, and open-world adventures.
 </p>
 
-<a class="button"
-href="https://www.youtube.com/@CaptainGrantham">
+<a class="button" href="https://www.youtube.com/@CaptainGrantham">
 Visit YouTube Channel
 </a>
-<h2 style="text-align:center; margin-top:40px;">Latest Video</h2>
 
-<section style="text-align:center; padding:60px 20px; background:#0b1726;">
-  <h2 style="color:#d4af37; letter-spacing:2px;">LATEST MISSION</h2>
-
-  <div style="max-width:900px; margin:30px auto;">
-    <iframe
-      width="100%"
-      height="450"
-      src="https://www.youtube.com/embed/Mf6ReCm3sno"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-<section style="text-align:center; padding:60px 20px;">
-  <h2 style="color:#d4af37; letter-spacing:2px;">LATEST UPLOADS</h2>
-
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
-
-    <iframe width="300" height="170"
-    src="https://www.youtube.com/embed/FDMqc5gvzvM"
-    frameborder="0" allowfullscreen></iframe>
-
-    <iframe width="300" height="170"
-    src="https://www.youtube.com/embed/sIAadd3j-54"
-    frameborder="0" allowfullscreen></iframe>
-
-    <iframe width="300" height="170"
-    src="https://www.youtube.com/embed/1qGDq2NJyIQ"
-    frameborder="0" allowfullscreen></iframe>
-
-  </div>
-</section>
-<section class="sections">
-
-<div class="card">
-<h2>Flight Simulation</h2>
-<p>
-Commercial aviation, general aviation,
-navigation, procedures, aircraft systems,
-and realistic flying experiences.
-</p>
 </div>
-
-<div class="card">
-<h2>Survival</h2>
-<p>
-Resource management, strategy,
-and overcoming demanding environments.
-</p>
-</div>
-
-<div class="card">
-<h2>Exploration</h2>
-<p>
-Open worlds, hidden discoveries,
-and journeys into the unknown.
-</p>
-</div>
-
 </section>
 
-<footer>
+<section id="latest">
+<h2>LATEST MISSION</h2>
+
+<div style="max-width:900px; margin:30px auto;">
+<iframe width="100%" height="450"
+src="https://www.youtube.com/embed/Mf6ReCm3sno"
+frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="uploads">
+<h2>LATEST UPLOADS</h2>
+
+<div class="cards">
+
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/FDMqc5gvzvM"
+frameborder="0"></iframe>
+
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/sIAadd3j-54"
+frameborder="0"></iframe>
+
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/1qGDq2NJyIQ"
+frameborder="0"></iframe>
+
+</div>
+</section>
+
+<section>
+<h2>SIMULATION • SURVIVAL • EXPLORATION</h2>
+<p>Flight simulation, survival gameplay, and open-world exploration.</p>
+</section>
+
+<footer style="text-align:center; padding:40px; color:#8b949e;">
 © Captain Grantham
 </footer>
 
 </body>
 </html>
-```
