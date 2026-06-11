@@ -164,6 +164,33 @@ function tick(){
  d.getUTCFullYear();
 }
 tick(); setInterval(tick,1000);
+   <script>
+async function loadEGJBWeather() {
+
+    try {
+
+        const response = await fetch(
+            "https://tgftp.nws.noaa.gov/data/observations/metar/stations/EGJB.TXT"
+        );
+
+        const text = await response.text();
+
+        document.getElementById("egjb-weather").innerHTML =
+            "<strong>EGJB HOME STATION</strong><br><br>" +
+            text.replace(/\n/g,"<br>");
+
+    } catch(error) {
+
+        document.getElementById("egjb-weather").innerHTML =
+            "METAR UNAVAILABLE";
+
+    }
+}
+
+loadEGJBWeather();
+
+setInterval(loadEGJBWeather,300000);
+</script>
 </script>
 </body>
 </html>
