@@ -175,9 +175,7 @@ tick(); setInterval(tick,1000);
 
         const text = await response.text();
 
-        document.getElementById("egjb-weather").innerHTML =
-            "<strong>EGJB HOME STATION</strong><br><br>" +
-            text.replace(/\n/g,"<br>");
+        document.getElementById("egjb-weather").innerHTML = text;
 
     } catch(error) {
 
