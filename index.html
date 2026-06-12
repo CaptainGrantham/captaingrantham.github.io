@@ -216,6 +216,8 @@ async function loadEGJBWeather() {
     } catch (error) {
         document.getElementById("egjb-weather").innerHTML = "METAR UNAVAILABLE";
     }
+}
+
 loadEGJBWeather();
 setInterval(loadEGJBWeather, 300000);
 </script>
