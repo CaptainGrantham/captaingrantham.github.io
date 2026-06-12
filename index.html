@@ -205,12 +205,22 @@ tick();
 setInterval(tick,1000);
 
 async function loadEGJBWeather() {
+    console.log("weather function running");
+
     try {
         const response = await fetch("https://raspy-band-2adb.t-skonovka.workers.dev");
+        console.log("response received", response);
+
         const text = await response.text();
+        console.log("text received", text);
+
         document.getElementById("egjb-weather").innerHTML = text;
+
     } catch (error) {
+        console.error("FETCH FAILED:", error);
         document.getElementById("egjb-weather").innerHTML = "METAR UNAVAILABLE";
+    }
+}
     }
 }
 
