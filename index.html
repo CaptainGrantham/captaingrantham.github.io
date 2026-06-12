@@ -173,7 +173,6 @@ tick(); setInterval(tick,1000);
         const response = await fetch(
     "https://aviationweather.gov/api/data/metar?ids=EGJB&format=raw"
 );
-        );
 
         const text = await response.text();
 
