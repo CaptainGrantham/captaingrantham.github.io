@@ -26,7 +26,11 @@ header a:hover{color:var(--gold)}
 .r1{inset:10%}.r2{inset:25%}.r3{inset:40%}
 .crossh,.crossv{position:absolute;background:rgba(0,255,102,.2)}
 .crossh{height:1px;width:100%;top:50%}.crossv{width:1px;height:100%;left:50%}
-.sweep{position:absolute;width:50%;height:50%;left:50%;top:50%;transform-origin:0 0;background:linear-gradient(90deg,rgba(0,255,102,.35),transparent);animation:spin 6s linear infinite}
+.sweep{position:absolute;width:50%;height:50%;left:50%;top:50%;transform-origin:0 0;background:linear-gradient(
+    90deg,
+    rgba(212,175,55,.45),
+    transparent
+);;animation:spin 6s linear infinite}
 .aircraft{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:40px;color:var(--hud)}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1200px;margin:20px auto;padding:20px}
