@@ -234,6 +234,30 @@ setInterval(loadEGJBWeather, 300000);
             console.error("video-grid not found in HTML");
             return;
         }
+        async function loadSimbrief() {
+
+    try {
+
+        const response = await fetch(
+            "https://simbrief-feed.t-skonovka.workers.dev/"
+        );
+
+        const data = await response.json();
+
+        document.getElementById("simbrief-data").innerHTML = `
+            <p><strong>AIRCRAFT:</strong> ${data.aircraft}</p>
+            <p><strong>ROUTE:</strong> ${data.origin} → ${data.destination}</p>
+            <p><strong>CRUISE:</strong> FL${Math.round(data.cruise / 100)}</p>
+            <p><strong>TRACK:</strong> ${data.route}</p>
+        `;
+
+    } catch (error) {
+
+        document.getElementById("simbrief-data").innerHTML =
+            "DISPATCH OFFLINE";
+
+    }
+}
 
         container.innerHTML = "";
 
@@ -263,6 +287,8 @@ setInterval(loadEGJBWeather, 300000);
 
 loadLatestVideos();
 setInterval(loadLatestVideos, 300000);
+loadSimbrief();
+setInterval(loadSimbrief, 300000);
 </script>
 </body>
 </html>
